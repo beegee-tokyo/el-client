@@ -24,6 +24,8 @@ typedef enum {
   CMD_CB_ADD,       /**< Add a custom callback */
   CMD_CB_EVENTS,    /**< ??? */
   CMD_GET_TIME,     /**< Get current time in seconds since the unix epoch */
+  CMD_RESTART,      /**< Reset ESP */
+  CMD_RESTARTSYS,   /**< Reset both ESP and attached Arduino */
   //CMD_GET_INFO,
 
   CMD_MQTT_SETUP = 10, /**< Register callback functions */

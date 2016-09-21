@@ -17,6 +17,10 @@ class ELClientCmd {
     ELClientCmd(ELClient* elc);
     // Get the current time in seconds since the epoch, 0 if the time is unknown
     uint32_t GetTime();
+    // Reboot ESP and uC
+    uint32_t SysRestart();
+    // Reboot ESP
+    uint32_t EspRestart();
 
   private:
     ELClient* _elc; /**< ELClient instance */

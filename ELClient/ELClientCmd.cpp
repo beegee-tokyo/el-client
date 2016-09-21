@@ -36,3 +36,31 @@ uint32_t ELClientCmd::GetTime() {
   return pkt ? pkt->value : 0;
 }
 
+/*! SysRestart()
+@brief Restart both ESP and uC
+@details RST input of uC must be connected to ESP and reset pin must be set correct 
+@warning If the reset pin of the uC is not connected or the setup is wrong, only the ESP will reboot.
+	The ESP will not respond to this command because it will try to reset the uC and itself after receiving the command
+@par Example
+@code
+	cmd.SysRestart();
+@endcode
+*/
+uint32_t ELClientCmd::SysRestart() {
+  _elc->Request(CMD_RESTARTSYS, 0, 0);
+  _elc->Request();
+}
+
+/*! EspRestart()
+@brief Restart ESP
+@warning The ESP will not respond to this command because it will try to reset and itself after receiving the command
+@par Example
+@code
+	cmd.SysRestart();
+@endcode
+*/
+uint32_t ELClientCmd::EspRestart() {
+  _elc->Request(CMD_RESTART, 0, 0);
+  _elc->Request();
+}
+
