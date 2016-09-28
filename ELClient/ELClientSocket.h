@@ -142,7 +142,7 @@ class ELClientSocket {
 		bool _hasUserCb = false; /**< Flag for user callback, true if user callback has been set */
 		int16_t _status; /**< Connection status */
 		uint16_t _len; /**< Number of sent/received bytes */
-		char *_data; /**< Buffer for received data */
+		void *_data; /**< Buffer for received data */
 		uint8_t _resp_type; /**< Response type: 0 = send, 1 = receive; 2 = reset connection, 3 = connection */
 		uint8_t _client_num; /**< Connection number, value can be 0 to 3 */
 };

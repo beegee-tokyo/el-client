@@ -12,6 +12,8 @@
 // constructor
 /*! ELClientMqtt(ELClient* elc)
 @brief Constructor for ELClientMqtt
+@param elc
+	Pointer to ELClient instance
 @par Example
 @code
 	ELClientMqtt(ELClient* elc);

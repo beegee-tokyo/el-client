@@ -79,7 +79,7 @@ void ELClientSocket::socketCallback(void *res)
 	_status = 1;
 	if (_hasUserCb) 
 	{
-		_userCb(_resp_type, _client_num, _len, _data);
+		_userCb(_resp_type, _client_num, _len, (char *)_data);
 	}
 }
 

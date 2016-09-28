@@ -13,6 +13,8 @@
 #define SLIP_ESC_END  0334    /**< ESC ESC_END means END data byte */
 #define SLIP_ESC_ESC  0335    /**< ESC ESC_ESC means ESC data byte */
 
+#define DEFAULT_SLIP_BUFFER_SIZE 128
+
 //===== Input
 
 /*! protoCompletedCb(void *res)
@@ -81,6 +83,11 @@ ELClientPacket* ELClient::protoCompletedCb(void) {
     }
     return NULL;
   } else {
+    if( callbackPacketHandler != NULL )
+    {
+      if( callbackPacketHandler(packet) )
+        return NULL;
+    }
     // command (NOT IMPLEMENTED)
     if (_debugEn) _debug->println("CMD??");
     return NULL;
@@ -130,6 +137,27 @@ ELClientPacket *ELClient::Process() {
     }
   }
   return NULL;
+}
+
+/*! SetReceiveBufferSize(uint16_t size)
+@brief Reserve the memory for the receiving buffer
+@note
+	By default the max size of a datapacket is set to 128 bytes. If it is necessary to handle bigger data packets this function increases the available buffer size. 
+@param size
+	Size of the buffer
+@par Example
+@code
+	// Set max size of received packets
+	esp.SetReceiveBufferSize(192);
+@endcode
+*/
+void ELClient::SetReceiveBufferSize(uint16_t size)
+{
+  _proto.bufSize = size;
+  _proto.buf = realloc(_proto.buf, size);
+  
+  if( _proto.buf == 0 )
+    _proto.bufSize = 0;
 }
 
 //===== Output
@@ -332,8 +360,8 @@ void ELClient::Request(void) {
 @endcode
 */
 void ELClient::init() {
-  _proto.buf = _protoBuf;
-  _proto.bufSize = sizeof(_protoBuf);
+  _proto.buf = malloc(DEFAULT_SLIP_BUFFER_SIZE);
+  _proto.bufSize = DEFAULT_SLIP_BUFFER_SIZE;
   _proto.dataLen = 0;
   _proto.isEsc = 0;
 }
@@ -364,7 +392,7 @@ void ELClient::init() {
 @endcode
 */
 ELClient::ELClient(Stream* serial) :
-_serial(serial) {
+_serial(serial), callbackPacketHandler(0) {
   _debugEn = false;
   init();
 }
@@ -397,7 +425,7 @@ _serial(serial) {
 @endcode
 */
 ELClient::ELClient(Stream* serial, Stream* debug) :
-_debug(debug), _serial(serial) {
+_debug(debug), _serial(serial), callbackPacketHandler(0) {
   _debugEn = true;
   init();
 }
