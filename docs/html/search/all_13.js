@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['waitresponse',['waitResponse',['../classELClientRest.html#a743f4ff9ac0ed78ed9eb5bac540e1a5e',1,'ELClientRest::waitResponse()'],['../classELClientSocket.html#a66629c98e586c73f5f2eee2b14a963dd',1,'ELClientSocket::waitResponse()']]],
+  ['waitreturn',['WaitReturn',['../classELClient.html#a96fc499e95ef69089c3aebdb89981342',1,'ELClient']]],
+  ['web_5fboolean',['WEB_BOOLEAN',['../ELClientWebServer_8cpp.html#a1fb4a879266ededfc55c19439a46647ba603b80b5c43902db86ccf148019cee3d',1,'ELClientWebServer.cpp']]],
+  ['web_5ffloat',['WEB_FLOAT',['../ELClientWebServer_8cpp.html#a1fb4a879266ededfc55c19439a46647ba0bb6c4434e673a56d399ef180d436deb',1,'ELClientWebServer.cpp']]],
+  ['web_5finteger',['WEB_INTEGER',['../ELClientWebServer_8cpp.html#a1fb4a879266ededfc55c19439a46647bad68855b16c4e5e6090571b94c2abd9c0',1,'ELClientWebServer.cpp']]],
+  ['web_5fjson',['WEB_JSON',['../ELClientWebServer_8cpp.html#a1fb4a879266ededfc55c19439a46647bacd209d4767b3b0df0d507957e7ca4811',1,'ELClientWebServer.cpp']]],
+  ['web_5fnull',['WEB_NULL',['../ELClientWebServer_8cpp.html#a1fb4a879266ededfc55c19439a46647ba717e74ee3c3c47969e05533c2cae3a45',1,'ELClientWebServer.cpp']]],
+  ['web_5fstring',['WEB_STRING',['../ELClientWebServer_8cpp.html#a1fb4a879266ededfc55c19439a46647baa5849c83d9bb628efae1ffe680d300df',1,'ELClientWebServer.cpp']]],
+  ['webservercallback',['WebServerCallback',['../ELClientWebServer_8h.html#a6056805250d3281d6c2b67f2e999a046',1,'ELClientWebServer.h']]],
+  ['webservercommand',['WebServerCommand',['../ELClientWebServer_8h.html#a1fbf71cf21b4fd2e06b2c26b12efdf89',1,'ELClientWebServer.h']]],
+  ['webserverpackethandler',['webServerPacketHandler',['../classELClientWebServer.html#a3b4e84be5d9d08e29ee8bb7aa3b69717',1,'ELClientWebServer']]],
+  ['webvaluetype',['WebValueType',['../ELClientWebServer_8cpp.html#a1fb4a879266ededfc55c19439a46647b',1,'ELClientWebServer.cpp']]],
+  ['wifi_5fstatus',['WIFI_STATUS',['../ELClient_8h.html#afe1eb3da4e57af467c230be41d72a23b',1,'ELClient.h']]],
+  ['wificb',['wifiCb',['../classELClient.html#ae4baa80487695d3d650f56d8971bb40d',1,'ELClient']]],
+  ['wire',['WIRE',['../SC16IS750_8cpp.html#a5fb65319d8f31c75826267805bb435d1',1,'SC16IS750.cpp']]],
+  ['write',['write',['../classELClient.html#a752ddd938f29124a1a6a8b7f72cd9787',1,'ELClient::write(uint8_t data)'],['../classELClient.html#a8b8c7b439a885eb13f406072e41f18d1',1,'ELClient::write(void *data, uint16_t len)'],['../classSC16IS750.html#a31af85ef062cb881b5d3f8383bc1d055',1,'SC16IS750::write()']]],
+  ['writebyte',['WriteByte',['../classSC16IS750.html#a1073c876bb103bf7935a7efac380a224',1,'SC16IS750']]],
+  ['writeregister',['WriteRegister',['../classSC16IS750.html#a7bd9271c8944156b3b03a6ba8746e405',1,'SC16IS750']]],
+  ['ws_5fbutton',['WS_BUTTON',['../ELClientWebServer_8cpp.html#aba100074536a92351f37947a6d818d14a864564d06c0703367e93f7b6f0975967',1,'ELClientWebServer.cpp']]],
+  ['ws_5fload',['WS_LOAD',['../ELClientWebServer_8cpp.html#aba100074536a92351f37947a6d818d14a62b65f47220ce5a458965dfd42d3e53e',1,'ELClientWebServer.cpp']]],
+  ['ws_5frefresh',['WS_REFRESH',['../ELClientWebServer_8cpp.html#aba100074536a92351f37947a6d818d14a37d583b33cdb9fedb36f12ed70d47beb',1,'ELClientWebServer.cpp']]],
+  ['ws_5fsubmit',['WS_SUBMIT',['../ELClientWebServer_8cpp.html#aba100074536a92351f37947a6d818d14a7f63ab4b54bde0c16df6d8c917006778',1,'ELClientWebServer.cpp']]]
+];
